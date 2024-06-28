@@ -1,0 +1,14 @@
+{% extends "pamati_sintakse.html" %}
+
+{% block content %}
+<h1>Ielagoties sistēmā</h1>
+<form action="/pieteikties" method="post">
+  <label for="lietotajvards">Lietotājvards:</label>
+  <input type="text" id="lietotajvards" name="lietotajvards" required>
+  <br>
+  <label for="parole">Parole:</label>
+  <br>
+  <input type="password" id="parole" name="parole" required>
+  <br>
+  <input type="submit" value="Ielogoties">
+{% endblock %}

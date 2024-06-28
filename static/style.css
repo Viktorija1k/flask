@@ -100,7 +100,7 @@ footer {
 h1 {
   color: #ba8a4f;
   font-family: Sofia, sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   text-align:center;
 }
 p {
@@ -185,15 +185,6 @@ div {
   animation-duration: 5s;
 }
 
-@keyframes mymove {
-  from {top: 0px;}
-  to {top: 50px;}
-  0%   {background-color:#e5ed7e; left:0px; top:0px;}
-  25%  {background-color:#a01875; left:200px; top:0px;}
-  50%  {background-color:#37f63a; left:200px; top:200px;}
-  75%  {background-color:#9f3aa1; left:0px; top:200px;}
-  100% {background-color:#00ccff; left:0px; top:0px;}
-}
 
 
  #lapas {
