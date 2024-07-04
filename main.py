@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, redirect,  url_for, session, flash
+from flask import Flask, render_template, request, session, url_for, flash, redirect
 import sqlite3
-from werkzeug.security import generate_password_hash , check_password_hash 
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 app = Flask(__name__)
 
-app.secret_key = 'manasesija'
+app.secret_key = "manasesija"
 
 @app.route('/')
 def index():
@@ -13,11 +13,12 @@ def index():
     
 @app.route('/par_mums')
 def par_mums():
-    return render_template('par_mums.html')
+    return render_template('par mums.html')
 
 @app.route('/kontakti')
 def kontakti():
     return render_template('kontakti.html')
+  
 
 @app.route('/sveiciens')
 def sveiciens():
@@ -26,6 +27,32 @@ def sveiciens():
 @app.route('/pamati_sintakse')
 def pamati_sintakse():
     return render_template('pamati_sintakse.html')
+
+@app.route('/portfolio_lapa')
+def portfolio_lapa():
+    return render_template('portfolio_lapa.html')
+
+@app.route('/map')
+def map_view():
+    return render_template('map.html')
+
+@app.route('/par_mums_lapa')
+def par_mums_lapa():
+    return render_template('par_mums_lapa.html')
+
+@app.route('/parmums')
+def parmums():
+    return render_template('parmums.html')
+
+
+@app.route('/adopte_miluli')
+def adopte_miluli():
+    return render_template('adopte_miluli.html')
+
+@app.route('/kontaktinformacija')
+def kontaktinformacija():
+    return render_template('kontaktinformacija.html')
+
 
 @app.route('/mainigie')
 def mainigie():
@@ -125,6 +152,8 @@ def aiziet():
     lietotajs = request.form['lietotajvards']
     return f"Paldies, {lietotajs}! Jūsu pieteikums ir saņemts."
 
+
+
 @app.route('/majasdarbs')
 def majasdarbs():
     return render_template('majasdarbs.html')
@@ -162,12 +191,12 @@ def pieteikties():
             session['lietotajvards'] = lietotajvards
             return redirect(url_for('panelis'))
         else:
-            flash('Nepareizs lietotājvārds vai parole!')
+            flash('Nepareizs lietotājvārds vai parole!!!!')
     return render_template('pieteikties.html')
 
 @app.route('/panelis')
 def panelis():
-    if 'lietotajs' not in session:
+    if 'lietotajvards' not in session:
         return redirect(url_for('pieteikties'))
     conn = sqlite3.connect('datubaze.db')
     cursor = conn.cursor()
@@ -177,10 +206,6 @@ def panelis():
     return render_template('panelis.html', lietotaji=lietotaji)
 
 
-@app.route('/izlogoties')
-def izlogoties():
-    session.pop('lietotajvards', None)
-    return redirect(url_for('pieteikties'))
 
 @app.route('/iesniegt', methods=['POST'])
 def iesniegt():

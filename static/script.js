@@ -55,13 +55,29 @@ function aprekins() {
 let vards = document.getElementById("vards").value;
 let pirmais= parseFloat(document.getElementById("a").value);
 let otrais= parseFloat(document.getElementById("b").value);
- let summa= pirmais+otrais;
+if (!vards.match(/^\S[a-zA-Zā-žĀ-Ž\s]*$/)) {
+    alert(" Lūdzu ievadiet vārdu!");
+    return;
+}
+
+if (pirmais === "" || otrais === "" || isNaN(pirmais) || isNaN(otrais)) {
+    alert("Ievadiet skaitļi!");
+    return;
+  }
+
+
+if (!Number.isInteger(Number(pirmais)) || !Number.isInteger(Number(otrais))) {
+    alert("Ievadiet veselu skaitli!");
+    return;
+    }
+
+let summa= pirmais+otrais;
 console.log("Tevi sauc:" + vards + " + Atbilde ir:" + summa);
 document.getElementById("rezultats").innerHTML = "Tevi sauc:" + vards + " <br> Tu ievadiji a vertibu:" + pirmais + "<br> un otra vertiba: " + otrais + "<br> Atbilde ir:" + summa;
 }
 
  let age =18;
- 
+
 if (age < 18) {
   console.log("Nepilngadīgs");
 } else if (age >= 18 && age < 65) {
@@ -82,14 +98,14 @@ while (j<=10) {
   console.log("Vertibas: " + j);
   j++;
 }
-  
+
 let k=8;
 
 do {
   console.log("DO WHILE: " + k);
   k++;
 } while (k<=10) 
-  
+
 let skaitlis =[6,3,6,31,78,9];
 
 for(let i=0; i<skaitlis.length; i++) {

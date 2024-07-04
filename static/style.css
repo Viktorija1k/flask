@@ -1,17 +1,17 @@
-html, body {
-   height: 100%;
-   margin: 0;
-   padding: 0;
-   width: 100%;
-   font-family: Times New Roman,serif, sans-serif;
-   background: url(bilde3.jpg) no-repeat center fixed; 
-   background-size: cover;
-   background-color: #f561c6;   
+html, 
+body {
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+  background-image: url('/static/media/manabilde.jpg');no-repeat center fixed;
+  font-family: Time New Roman,serif,sans-serif;
+    
   }
 
 .topnav {
   overflow: hidden;
-  background: url(bilde3.jpg) no-repeat center fixed;;
+  background-image: url('/static/media/manabilde.jpg');
   margin-top: 0%;
   display: flex;
   justify-content: space-around;
@@ -44,32 +44,32 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #cdacc3;
+    background-color: #e8cae4;
   }
 
   .sidebar a {
     padding: 30px;
     text-decoration: none;
-    font-family: 'Times New Roman',serif, sans-serif;
+    font-family: 'Ariel',serif, sans-serif;
     font-size: 20px;
-    color: #1d0fe6;
+    color: #070434;
     display: block;
   }
 
   .sidebar a:hover {
-    background-color: #c49ad0;
+    background-color: #dabbe2;
     color: #7f0788;
   }
 
 main {
   margin-left: 100px;
   padding: 30px;
-  background: url(bilde3.jpg) no-repeat center fixed; 
+  background-image: url('/static/media/manabilde.jpg');
   background-size: cover;
 }
 
 footer {
-  background: url(bilde3.jpg) no-repeat center fixed; 
+  background-image: url('/static/media/manabilde.jpg');
   background-size: cover;
   text-align: center;
   padding: 10px;
@@ -111,7 +111,7 @@ p {
 }
 
 #content {
-  background: url(fon2.jpg); 
+  background-image: url('/static/media/manabilde.jpg');
   background-size: cover;
   padding: 20px;
   border-radius: 10px;
@@ -130,7 +130,7 @@ p {
 }
 
 #tabula {
-  background: url(fon2.jpg) no-repeat center fixed; 
+  background-image: url('/static/media/manabilde.jpg') no-repeat center fixed;
   background-size: cover;
   padding: 20px;
   border-radius: 10px;
@@ -138,7 +138,7 @@ p {
 }
 
 #canva {
-  background: url(bilde3.jpg) no-repeat center fixed; 
+  background-image: url('/static/media/manabilde.jpg');
   background-size: cover;
   padding: 20px;
   border-radius: 10px;
@@ -172,8 +172,25 @@ p {
    tr:nth-child(even) {
    background-color: rgb(69, 211, 169, 0.4);
    }
+
    th:nth-child(even),td:nth-child(even) {
    background-color: rgba(150, 212, 212, 0.4);
+}
+
+#tabula table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px
+}
+
+#tabula th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+#tabula th {
+  background-color: #e88d8d;
 }
 
 div {
@@ -197,4 +214,9 @@ div {
   width: 100%;
   height: 100%;
 }
- 
+
+#map {
+  width="500"
+  height="450"
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, iniial-scale=1.0">
+<title>Par mums</title>
+<link href="style1.css" rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static', filename='style1.css') }}" rel="stylesheet" type="text/css" />
+</head>
+  
+<body>
+<h1>Par mums! </h1> 
+  <p style="font-family:Times New Roman, serif;color:darkcyan;" >Laipni lūdzam mūsu dzīvnieku patversmes mājaslapā!</p>
+<img src="{{ url_for('static', filename='media/girl and dog.jpg') }}" width="200px">
+  <p>Mūsu patversme ir vieta, kur mīlestība un rūpes satiekas ar tiem, kam tas visvairāk nepieciešams - pamestiem un bezpajumtniekiem dzīvniekiem. Mēs esam nevalstiska organizācija, kuras mērķis ir nodrošināt pagaidu mājvietu un medicīnisko aprūpi dzīvniekiem, līdz mēs atrodam tiem pastāvīgus un mīlošus saimniekus.</p>
+<section>
+<h2>Mūsu mērķis</h2>
+<p style="font-family:Times New Roman, serif;">Mūsu misija ir sniegt otro iespēju dzīvniekiem, kuri ir nokļuvuši grūtībās. Katru dienu mēs strādājam, lai izglābtu dzīvības, rūpētos par dzīvnieku veselību un labklājību, kā arī veicinātu sabiedrības izpratni par atbildīgu mājdzīvnieku turēšanu.
+Mūsu patversmē dzīvo dažādu veidu dzīvnieki - suņi, kaķi, kā arī dažreiz mazie mājdzīvnieki, kā truši vai jūrascūciņas. Katram no viņiem ir sava unikālā vēsture, bet viņi visi gaida vienu un to pašu - savu jauno ģimeni.</p>
+</section>
+<h3 style="font-family:Times New Roman, serif;">Mūsu komanda</h3>
+<img src="{{ url_for('static', filename='media/cat and g.jpg') }}"  width="200px">
+<p>Mūsu komanda sastāv no pieredzējušiem un sirds siltumu pilniem cilvēkiem - gan profesionāliem veterinārārstiem, gan brīvprātīgajiem, kuri veltī savu laiku un mīlestību, lai nodrošinātu dzīvniekiem vislabākos apstākļus.</p>
+<p>Mēs ticam, ka kopā mēs varam radīt labāku pasauli mūsu dzīvnieku draugiem. Paldies par jūsu atbalstu un ieinteresētību!</p>
+<p>Ja vēlēs pieienoties mūsu komandai,tad atstāj savu pieteikumu:</p>
+<br><br>
+
+  <section id="content"
+    <form>
+    <label for=<"vards">Vards:</label>
+    <input type="text" id="vards" name="vards"><br><br>
+    <label for="numurs">Tel.numurs:</label>
+    <input type="numurs" id="numurs" name="numurs"><br><br>
+    <input type="submit" value="Iesniegt">
+    </form>
+    </section>
+    <br><br>
+ <a href="{{ url_for('par_mums_lapa') }}">Sākums</a>
+  
+  <footer>&copy; SIA Kopā ar mums</footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</footer>
+</body>
+</html>
+
+
+

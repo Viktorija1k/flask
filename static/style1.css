@@ -1,0 +1,51 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  background: url('/static/media/kartinka.jpg');
+}
+.topnav {
+  overflow: hidden;
+  background-color: #ebefef;
+  margin-top: 0%;
+  display: initial;
+  justify-content: space-around;
+  margin-left: 100px;
+}
+
+.topnav a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: style;
+  font-size: 23px;
+}
+
+.topnav a:hover {
+  background-color: #36d3e7;
+  color:#097ed7;
+
+}
+.topnav a.active {
+  background: url('/static/media/kartinka.jpg');
+  color: #0d75fd;
+}
+
+h1 {
+  font-family: Times New Roman, sans-serif;
+  font-size: 30px;
+  text-align:center;
+  
+}
+
+main, footer {
+  margin-left: 100px;
+  padding: 30px;
+  background: url('/static/media/kartinka.jpg');
+  background-size: cover;
+}
+
+
+
+  

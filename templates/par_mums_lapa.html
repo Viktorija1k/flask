@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, iniial-scale=1.0">
+  <title>Par mums lapa</title>
+  <link href="style1.css" rel="stylesheet" type="text/css" />
+  <link href="{{ url_for('static', filename='style1.css') }}" rel="stylesheet" type="text/css" />
+</head>
+<header>
+  <nav class="topnav">
+  <a href="index.html" class="active">Sākums</a>
+  <a href="{{ url_for('parmums') }}">Par mums</a>
+  <a href="{{ url_for('adopte_miluli') }}">Adoptē mīluli</a>
+  <a href="{{ url_for('kontaktinformacija') }}">Kontakti</a>
+</nav>
+</header>
+<body>
+<section id="content"
+<br><br><br>
+<h1 style="text-align:center";> SIA 'Kopā ar mums'</h1>
+<h1 style="text-align:side;font-family:Times New Roman,serif;"> Musu misija</h1>
+<p1>  Musu komanda vienmēr gatava rūpēties par jebkura dzīvnieka labturību un aizsardzību, un īpaši dot iespēju dzīvot dzīvniekiem, kuriem jebkādu iemeslu dēļ ilgstoši nav iespējams atrast īpašnieku Katru gadu pie mums nonāk:.</p1>
+<div class="mycontainer">
+<div style="background-color:#FFF4A3;">
+<h2 style="text-align:center":>Suņi &#128021;</h2>
+<p style="text-align:center;font-family:Georgia,Times, serif":>100</p>
+</div>
+<div style="background-color:#FFC0C7;">
+<h2 style="text-align:center":>Kaķi &#128008;</h2>
+<p style="text-align:center;font-family:Georgia,Times, serif":>300</p>
+</div>
+<br></br>
+<section id="par mums"> 
+<h3 style="text-align:center";>Musu mērķi </h3>
+  <ol type="square"">
+  <li> Nodrošināt jebkuram dzīvniekam, kuram jebkādu iemeslu dēļ ilgstoši nevar atrast jaunu saimnieku, uzturēšanu to mūža garumā, izveidojot un uzturot dzīvnieku pansionātu;</li>
+    <li> veicināt labvēlīgu attieksmi pret dzīvniekiem, neatkarīgi no to sugas, vecuma un veselības stāvokļa;</li>
+    <li>mēs sniedzam atbalsu un norādījujumus visā adoptaciijas procesā </li>
+    <li>Brīvprātīgā darba atvērto durvju dienu semināru turpināšana, brīvprātīgo palīgu suņu staidzināšanā semināru turpināšana, jaunu brīvprātīgā darba veicināšanas iespēju meklēšana, piesaistot dažādas sabiedrības mērķa grupas.</li>
+   </ol>
+  <h4>Atrašanas vieta</h4>
+    <p>Mēs atrodamies Rīgā, Siguldā, Cēsu un bauskas novadā.Dzīvnieku patversme SIA "Kopā ar mums" apmeklētājiem atvērta katru dienu (bez brīvdienām):</p>
+    <ul type="square">
+    <li>10:00-18:00</li>
+    </ul>
+    </section>
+    <br><br>
+  <section id="Adoptē mīluli">
+<h3>Adoptē mīluli</h3>
+<br>
+<p style="text-align:center;" style="font-size:60px;">Mums mīluli ir daudz:</p>   
+<table align="center" width="400" height="250" bordercolor="white" border="2" cellspacing="0">
+    <tr>
+    <td> <img src="{{ url_for('static', filename='media/cat.jpg') }}"  width="200" height="300"></td>
+    <td><img src="{{ url_for('static', filename='media/dog.jpg') }}"  width="200" height="300"></td>
+    </tr>
+    <tr>
+    <td><img src="{{ url_for('static', filename='media/cat2.jpg') }}" width="200" height="300"></td>
+    <td><img src="{{ url_for('static', filename='media/dog2.jpg') }}" width="200" height="300"></td>
+    </tr>
+    </table>
+  </section>
+   <br>
+  <a href= "https://www.pets4homes.co.uk/" target="_blank">informacija </a>
+  <div id="googleMap"</div>
+  <br><br><br>
+  <p style="text-align:left;" style="font-size:70px;">Kontakti:</p>
+  <p>tel: +371 2525252
+  e-pasts: kopaarmums@inbox.lv</p>
+  <p>Adrese:</p>
+  <p>Meža iela 1, Jelgavas pagasts,Jelgavas novads, LV-1111</p> 
+  <p>DARBA LAIKS: Pirmdiena-Svetdiena no 10:00 līdz 22:00</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d166859.76125980925!2d23.775490554258877!3d56.66786127109827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2slv!4v1718659723278!5m2!1sru!2slv" width="500" height="350" style="border:50;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <br>
+  <a href="{{ url_for('index') }}">Sākums</a>
+<footer>&copy; SIA Kopā ar mums</footer>
+<script src="script.js"></script>
+</div>
+</section>
+  
+</body>
+
+</html>
