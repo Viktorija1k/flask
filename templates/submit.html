@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, iniial-scale=1.0">
+<title>Par mums</title>
+<link href="style1.css" rel="stylesheet" type="text/css" />
+<link href="{{ url_for('static', filename='style1.css') }}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+  <form action="{{ url_for('submit') }}" method="post">
+  </div>
+  <div class="form-group">
+  <label for="name">Vards:</label>
+  <input type="text" id="vards" name="name" required><br><br>
+  </div>
+  <div class="form-group">
+  <label for="phone">Tel.numurs:</label>
+  <input type="tel" id="phone" name="phone" required><br><br>
+  </div>
+  <div class="form-group">
+  <button type="submit">"Iesniegt"</button>
+  </div>
+  </form>
+  { if message %}}
+  <div class = "message">{{ message }}</div>
+  {% endif %}
+</div>
+  <a href="{{ url_for('par_mums_lapa') }}">Sākums</a>
+</body>
+</html>

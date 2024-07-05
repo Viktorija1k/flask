@@ -48,8 +48,9 @@ function text() {
     konteksts.fillStyle = "black";
     konteksts.fillText("Sveiki, pasaule!", 75, 100)
     konteksts.lineWidth = 5;
-
 }
+
+                   
 
 function aprekins() {
 let vards = document.getElementById("vards").value;
@@ -60,6 +61,7 @@ if (!vards.match(/^\S[a-zA-Zā-žĀ-Ž\s]*$/)) {
     return;
 }
 
+  
 if (pirmais === "" || otrais === "" || isNaN(pirmais) || isNaN(otrais)) {
     alert("Ievadiet skaitļi!");
     return;

@@ -13,7 +13,7 @@
 
 <header> <!-- Sis ir mans virsrakts-->
 <nav class="topnav">
-<a href="{{ url_for('index') }}" class="active">Sākums</a>
+<a href="{{ url_for('index') }}" target="_top" class="active">Sākums</a>
 <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css" />
  </nav>
 </header>
@@ -55,9 +55,8 @@
 Your browser does not support the audio element.
 </audio>
 <br>
-<a href="{{ url_for('kontakti') }}"> Sazinaties</a>
 <br>
-<a href="{{ url_for('index') }}">Sākums</a>
+<a href="{{ url_for('index') }}" target="_top">Sākums</a>
 
 </section> 
   </main>

@@ -43,7 +43,7 @@ def par_mums_lapa():
 @app.route('/parmums')
 def parmums():
     return render_template('parmums.html')
-
+ 
 
 @app.route('/adopte_miluli')
 def adopte_miluli():
@@ -150,8 +150,21 @@ def oop():
 @app.route('/aiziet', methods=['POST'])
 def aiziet():
     lietotajs = request.form['lietotajvards']
-    return f"Paldies, {lietotajs}! Jūsu pieteikums ir saņemts."
+    return f"Paldies, {lietotajs}! Jūsu esat sistēma."
 
+@app.route('/iesniegt1', methods=['POST'])
+def iesniegt1():
+    vards = request.form['vards']
+    numurs = request.form['numurs']
+    return f"Paldies, {vards}! Jūsu pieteikums ir saņemts. Jūsu numurs ir {numurs}."
+
+
+@app.route('/iesniegt2', methods=['POST'])
+def iesniegt2():
+    vards = request.form['vards']
+    uzvards = request.form['uzvards']
+    e_pasts = request.form['epasts']
+    return f"Paldies, {vards}! Jūsu pieteikums ir saņemts." 
 
 
 @app.route('/majasdarbs')
@@ -173,6 +186,9 @@ def majasdarbs2():
 @app.route('/aptauja')
 def aptauja():
     return render_template('aptauja.html')
+
+
+
 
 @app.route('/pieteikties', methods=['GET','POST'])
 def pieteikties():
@@ -204,6 +220,11 @@ def panelis():
     lietotaji = cursor.fetchall()
     conn.close()
     return render_template('panelis.html', lietotaji=lietotaji)
+
+@app.route('/izlogoties')
+def izlogoties():
+    session.pop('lietotajvards', None)
+    return redirect(url_for('pieteikties'))
 
 
 

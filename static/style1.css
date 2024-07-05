@@ -32,6 +32,15 @@ html,body {
   color: #0d75fd;
 }
 
+.center-gif {
+  width:100%;
+  width:100px;
+  justify-content: center;
+  margin:0;
+    
+}
+
+
 h1 {
   font-family: Times New Roman, sans-serif;
   font-size: 30px;

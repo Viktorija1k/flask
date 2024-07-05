@@ -27,28 +27,29 @@
   <aside class="sidebar">
     <a href="#Saturs">Saturs</a>
     <a href="#Tabula">Tabula</a>
-    <a href="#par_mums">Par mums</a>
+     <a href="{{ url_for('par_mums_lapa') }}">Mūsu partneri</a>
   </aside>
    <main id="lapas_saturs">
-    
-  <h1 style="text-align:center;font-family:Times New Roman";>Sveiki,pasaule!</h1>
+    <br><br>
+  <h1 style="text-align:center;font-family:Times New Roman";>"Look deep into nature,and you will understand everything better."
+    - Albert Einstein</h1>
   <p> Welcome guest!</p>
   <section id="Saturs"
-  <p>Šis ir mans pirmais HTML!</p>
-  <img src="{{ url_for('static', filename='/media/fon.jpg') }}" class="rounded-circle" alt="Cinque Terre" width="350" height="450">
+  <p>Discover the Futere with Us!</p>
+  <img src="{{ url_for('static', filename='/media/fon.jpg') }}" class="rounded-circle" alt="Cinque Terre"  width="350" height="450">
   <br>
   <ul type="square">
-  <li> Pirmais elemets</li>
-  <li>Otrais elements</li>
+  <li>"Vienīgais veids,kā paveikt lielisku darbu,ir mīlēt to,ko dari".</li>
+  <li>Kopā mēs esam spēcīgāki!</li>
   <ul>
-  <li>Apaksa elements 1</li>
-  <li>Apaksa elements 2</li>
+  <li>Vienotība padara mūs nepārspējamus.</li>
+  <li>Strādājam kopā,uzvarējam kopā.</li>
   </ul>
   </li>
-  <li>Trešais elements</li>
+  <li>Kad mēs esam vienoti,mēs esam nepārspējami.</li>
   <ol/></ol>
   </ul>
-  <a href="par_mums.html">Par mums</a>
+  <a href="{{ url_for('par_mums') }}">Par mums</a>
   <a href="{{ url_for('kontakti') }}">Sazinaties</a>
   <a href="{{ url_for('portfolio_lapa') }}">Portfolio</a>
   
@@ -58,26 +59,30 @@
   <table border="2">
   <table border="2">
   <tr>
-  <td>1.rinda 1.kolonna</td>
-  <td>1.rinda 2.kolonna</td>
+  <td>Koku stādīšanas kampaņa:</td>
+  <td>Parku tīrīšana:</td>
+  <td>Taureņu  populācijas aizsardzība:</td>
   </tr>
   <tr>
-  <td>2.rinda 1. kolonna</td>
-  <td>2.rinda 2. kolonna</td>
+  <td>Apraksts:Organizēt sabiedriskus pasākumus koku stādīšanai pilsēta.</td>
+  <td>Apraksts: Ikgadējas akcijas atkritumu savākšanai vietējās parkas.</td>
+  <td>Apraksts: Izveidot ziedu dārzus un biotopus,lai piesaistītu taurenus un veicinātu to populāciju..</td>
   </tr>
   <tr>
-  <td>3. rinda 1. kolonna</td>
-  <td>3. rinda 2. kolonna</td>
+  <td>Mērķis: Gada beigās iestādīt 10000 koku.</td>
+  <td>Mērķis: Samazināt atkritumu daudzumu parka par 50%.</td>
+  <td>Mērķis: Palielināt taureņu populāciju par 20%.</td>
   </tr>
   <tr>
-  <td>4. rinda 1. kolonna</td>
-  <td>4. rinda 2. kolonna</td>
+  <td>Rezultāti: Uz jūniju iestādīti 6548 koki.</td>
+  <td>Rezultāti: Pēdējos 5 mēnešu laika savāktas 3 tonnas atkritumu.</td>
+  <td>Rezultāti: Novērots 5% pieaugums taurenus populācijās.</td>
   </tr>
   </table>
   </section>
 <body>
     <br></br>
-    <p>Darbnieku saraksts:</p>
+    <p>Mūsu dalībnieki:</p>
     <table style="width:90%">
     <tr>
     <th>Vards</th>
@@ -98,6 +103,11 @@
     <td>Elvis</td>
     <td>Kalniņš</td>
     <td>27</td>
+    </tr>
+    <tr>
+    <td>Jason</td>
+    <td>Smith</td>
+    <td>40</td>
     </tr>
 </table>
 </body>
@@ -125,7 +135,7 @@
   <td> </td>
   </tr>
   <tr>
-  <td></td>
+  <td>Jason</td>
   <td> </td>
   <td>Tatija</td>
   <td> </td>
@@ -135,7 +145,7 @@
   </tr>
   <tr>
   <td> </td>
-  <td> </td>
+  <td>Jason</td>
   <td>Elvis</td>
   <td>Jānis</td>
   <td> </td>
@@ -145,7 +155,7 @@
   <tr>
   <td>Tatija</td>
   <td> </td>
-  <td> </td>
+  <td>Jason</td>
   <td> </td>
   <td>Elvis</td>
   <td> </td>
@@ -153,6 +163,13 @@
 </tr>
 </table>
 </body>
+<br><br> 
+<h2> "Tev ir iespēja pievienoties mūsu komandai jebkurā laikā. Mēs tevi gaidām!"</h2>
+<br>
+  <p1>Aizpildi pieteikumu mūsu sadaļā 'kontakti'.</p1>
+  <button type="button" class="btn btn-outline-info" onclick=""><a href= "https://18060c46-89d5-4262-8650-9c94a2933dd9-00-1wruqabcjfs5b.kirk.replit.dev/kontakti" target="_blank"> 
+      Pieteikšanās informācija</a> </button> <br><br>
+  
 <br><br><br><br><br>
     <section id="canva">
     <canvas id="zimejums" widht="500" height="400">
@@ -161,7 +178,9 @@
     <button onclick="aplis()">parādi apli!</button>
     <button onclick="linija()">paraāi līnija!</button>
     <button onclick="text()">parādi textu!</button>
-    <button type="button" class="btn btn-outline-info" onclick="aprekins()">Info</button>
+    <button type="button" onclick="alert('You are the best!')">Click Me!</button>
+    <button type="button" class="btn btn-outline-info" onclick=""><a href= "https://18060c46-89d5-4262-8650-9c94a2933dd9-00-1wruqabcjfs5b.kirk.replit.dev/par_mums" target="_blank"> 
+ info</a> </button> <br><br>
   </section>
   <section id= saturs>
   <lebel for="vards">Ievadi savu vārdu</lebel>
