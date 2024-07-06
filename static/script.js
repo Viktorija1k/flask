@@ -3,14 +3,24 @@ function atjaunotIetvaru(which) {
 }
 
 window.onload =function() {
-  zimetuzcanvas();
-}
-function zimetuzcanvas() {
-var canvas = document.getElementById("zimejums"); 
-var konteksts= canvas.getContext("2d");
-konteksts.fillStyle = "green";
-konteksts.fillRect(20, 25, 100, 100);
-  
+  zimetuzcanva();
+  var navLinks = document.querySelectorAll('.topnav a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.forEach(function(link) {
+          link.classList.remove('active');
+        });
+        this.classList.add('active');
+      });
+    });
+  }
+
+
+function zimetuzcanva() {
+  var kanva  = document.getElementById("zimejums");
+  var konteksts = kanva.getContext("2d");
+  konteksts.fillStyle = "SandyBrown";
+  konteksts.fillRect(10,10,100,90);
 }
 
 function taisni() {
@@ -26,8 +36,8 @@ var konteksts = canvas.getContext("2d");
 konteksts.beginPath();
 konteksts.arc(200, 200, 50, 0, 2 * Math.PI)
   konteksts.lineWidth = 13;
-  konteksts.fillStyle = "yellow";
-  konteksts.strokeStyle = "red";
+  konteksts.fillStyle = "pink";
+  konteksts.strokeStyle = "yellow";
   konteksts.fill();
   konteksts.stroke();
 }
@@ -35,8 +45,8 @@ function linija() {
 var canvas = document.getElementById("zimejums");
 var konteksts = canvas.getContext("2d");
   konteksts.beginPath();
-  konteksts.moveTo(20, 20);
-  konteksts.lineTo(60, 60);
+  konteksts.moveTo(50, 50);
+  konteksts.lineTo(90, 90);
   konteksts.lineWidth =5;
   konteksts.strokeStyle = "blue";
   konteksts.stroke();
@@ -46,12 +56,11 @@ function text() {
   var konteksts = canvas.getContext("2d");
     konteksts.font = "30px Arial";
     konteksts.fillStyle = "black";
-    konteksts.fillText("Sveiki, pasaule!", 75, 100)
+    konteksts.fillText("Butterfly!", 75, 100)
     konteksts.lineWidth = 5;
 }
 
                    
-
 function aprekins() {
 let vards = document.getElementById("vards").value;
 let pirmais= parseFloat(document.getElementById("a").value);

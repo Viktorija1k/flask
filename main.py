@@ -1,6 +1,9 @@
-from flask import Flask, render_template, request, session, url_for, flash, redirect
+from flask import Flask, render_template, request, session, url_for, flash,json, redirect, jsonify
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
+import csv
+import os
+import requests
 
 
 app = Flask(__name__)
@@ -183,11 +186,42 @@ def majasdarbs2():
         rez = "Otrais skaitlis ir lielāks"
     return render_template('majasdarbs.html', rez=rez)
 
+
+
+def nolasit_csv(faila_nosaukums):
+    if not os.path.exists(faila_nosaukums):
+        return []
+    with open(faila_nosaukums, mode='r' , newline='') as fails:
+         csv_lasitajs = csv.reader(fails)
+         return list(csv_lasitajs)
+
+
+@app.route('/csv2')
+def csv2():
+    dati= nolasit_csv('dati.csv')
+    return render_template('csv.html',dati=dati)
+
+
+def ierakstit_csv(faila_nosaukums, dati):
+    with open(faila_nosaukums, mode='a', newline='', encoding="UTF-8-sig" ) as fails:
+        csv_rakstitajs = csv.writer(fails)
+        csv_rakstitajs.writerow(dati)
+
+
+@app.route('/pievienot', methods=['POST'])
+def pievienot():
+    vards = request.form['vards']
+    vecums = request.form['vecums']
+    pilseta = request.form['pilseta']
+    if vards and vecums and pilseta:
+        ierakstit_csv('dati.csv', [vards, vecums, pilseta])
+    return redirect(url_for('csv2'))
+
+
+
 @app.route('/aptauja')
 def aptauja():
     return render_template('aptauja.html')
-
-
 
 
 @app.route('/pieteikties', methods=['GET','POST'])
@@ -272,6 +306,15 @@ def init_db():
     conn.close()
 
 init_db()
+
+@app.route('/joks', methods=['GET'])
+def joks():
+    saite = 'https://api.chucknorris.io/jokes/random'
+    atbilde = requests.get(saite)
+    dati = atbilde.json()
+    return render_template('joks.html', joks=dati['value'], saite=dati['url'])
+
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=5000)
